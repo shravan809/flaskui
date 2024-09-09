@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'backend', url: 'https://github.com/shravan809/flaskui.git'
+                git branch: 'main', url: 'https://github.com/shravan809/flaskui.git'
             }
         }
         stage('Setup Python Environment') {
