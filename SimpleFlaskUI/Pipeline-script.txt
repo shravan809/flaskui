@@ -43,7 +43,7 @@ pipeline {
                 script {
                     // Build and run Docker container
                     sh '''
-                        docker build -t myapp .
+                        docker build -t myapp SimpleFlaskUI/.
                         docker run -d -p 8000:8000 myapp
                     '''
                 }
