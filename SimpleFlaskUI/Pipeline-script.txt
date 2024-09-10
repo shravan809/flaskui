@@ -44,7 +44,7 @@ pipeline {
                     // Build and run Docker container
                     sh '''
                         docker build -t myapp SimpleFlaskUI/.
-                        docker run -d -p 8000:8000 myapp
+                        docker run -d -p 5000:5000 myapp
                     '''
                 }
             }
