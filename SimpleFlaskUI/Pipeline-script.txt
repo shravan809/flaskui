@@ -6,6 +6,15 @@ pipeline {
                 git branch: 'main', url: 'https://github.com/shravan809/flaskui.git'
             }
         }
+        stage('Debug Checkout') {
+            steps {
+                script {
+                    sh 'ls -la'  // List files in the workspace to check if requirements.txt exists
+                }
+            }
+        }
+
+        
         stage('Setup Python Environment') {
             steps {
                 script {
@@ -14,6 +23,7 @@ pipeline {
                 }
             }
         }
+
         stage('Install Dependencies') {
             steps {
                 script {
@@ -55,3 +65,5 @@ pipeline {
         }
     }
 }
+
+Path Operation Configuration
